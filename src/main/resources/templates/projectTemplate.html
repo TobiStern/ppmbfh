@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="../templates/masterTemplate :: page">
+	<div th:fragment="content">
+		<h1>Projektdetail</h1>
+		<table class="ui blue celled table">
+			<tr>
+				<td>Bezeichnung</td>
+				<td th:text="${projectDetail.getName()}"></td>
+			</tr>
+			<tr>
+				<td>Owner</td>
+				<td th:text="${projectDetail.getOwner()}"></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td th:text="${projectDetail.getStatus()}"></td>
+			</tr>
+			<tr>
+				<td>Projektphase</td>
+				<td th:text="${projectDetail.getProjectPhase()}"></td>
+			</tr>
+			<tr>
+				<td>Budget</td>
+				<td th:text="${projectDetail.getBudget()}"></td>
+			</tr>
+			<tr>
+				<td>Planned Value</td>
+				<td th:text="${projectDetail.getPlannedValue()}"></td>
+			</tr>
+			<tr>
+				<td>Actual Cost</td>
+				<td th:text="${projectDetail.getActualCost()}"></td>
+			</tr>
+			<tr>
+				<td>Earned Value</td>
+				<td th:text="${projectDetail.getEarnedValue()}"></td>
+			</tr>
+			<tr>
+				<td>Milestone</td>
+				<td th:text="${projectDetail.getMilestone()}"></td>
+			</tr>
+			<tr>
+				<td>Start</td>
+				<td th:text="${projectDetail.getStartDate()}"></td>
+			</tr>
+			<tr>
+				<td>Ende</td>
+				<td th:text="${projectDetail.getEndDate()}"></td>
+			</tr>
+			<tr>
+				<td>Team Member</td>
+				<td th:text="${projectDetail.getTeamMember()}"></td>
+			</tr>
+			<tr>
+				<td>Stakeholder</td>
+				<td th:text="${projectDetail.getStakeholder()}"></td>
+			</tr>
+			<tr>
+				<td>Risks</td>
+				<td th:text="${projectDetail.getRisks()}"></td>
+			</tr>
+			<tr>
+				<td>Beschreibung</td>
+				<td th:text="${projectDetail.getDescription()}"></td>
+			</tr>
+			<tr>
+				<td>Portfolio</td>
+				<td th:text="${projectDetail.getPortfolio()}"></td>
+			</tr>
+			<tr>
+				<td>Kunde</td>
+				<td th:text="${projectDetail.getCustomer()}"></td>
+			</tr>
+		</table>
+		<a href="/">Zur&uuml;ck</a> oder <a href="/portfolio?id=1">Portfolio</a> 
+	</div>
+</html>

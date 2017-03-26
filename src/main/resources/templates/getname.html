@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="../templates/masterTemplate :: page">
+	<div th:fragment="content">
+		<h1>Welcome to the Thymeleaf example</h1>
+		<form action="th" method="post">
+			<label for="name">Please enter your name: </label>
+			<input type="text" name="name"></input>
+			<button type="submit" >Go!</button>
+		</form>
+	</div>
+</html>

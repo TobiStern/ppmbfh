@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="../templates/masterTemplate :: page">
+	<div th:fragment="content">
+			<h1>Portfolio&uuml;bersicht</h1>
+			<div th:if="${not #lists.isEmpty(portfolioCollection)}">
+			<h2>Portfolio collection</h2>
+				<table class="ui blue sortable celled table">
+	  				<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Beschreibung</th>
+							<th>Status</th>
+							<th>fk_config</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="portfolio : ${portfolioCollection}">
+							<td th:text="${portfolio.getId()}"></td>
+							<td th:text="${portfolio.getName()}"></td>
+							<td th:text="${portfolio.getDescription()}"></td>
+							<td th:text="${portfolio.getStatus()}"></td>
+							<td th:text="${portfolio.getFk_config()}"></td>
+						<td><a href="" th:href="${'/portfolio?id=' + portfolio.getId()}">Einzel anzeigen</a></td>
+						</tr>
+				  </tbody>
+				</table>
+			</div> 
+			<div th:text="${portfolio}"></div>
+			<a href="/">Zur&uuml;ck</a> oder <a href="/project?id=1">Projekt &Uuml;bersicht</a>  
+	</div>
+</html>

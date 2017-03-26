@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="page">
+<head>
+	<title>PPM Tool</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="semantic/semantic.min.css" />
+    <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+    <script src="semantic/semantic.js" type="text/javascript"></script>
+    <script src="js/tablesort.js" type="text/javascript"></script>    
+    <script>
+	    $( document ).ready(function() {
+	        $('table').tablesort() 
+	    });
+    </script>
+</head>
+
+<body>
+	<div class="ui visible left fixed vertical sidebar menu">
+	  <div class="item">
+	    <a href="/"><img class="ui small image" src="images/maracuja.png"/></a>
+	  </div>
+	  <a href="/" class="item">Dashboard</a>	  
+	  <div class="item">
+	    <b>Portfolio</b>
+	    <div class="menu">
+	  	  <a href="/portfolio" class="item">Portfolios</a>
+	      <a href="/portfolio?id=1" class="item">Portfolio Detail</a>
+	    </div>
+	  </div>
+	  <a href="/project?id=1" class="item">Projekte</a>
+	</div>
+	<div class="pusher">	
+        <div id="content" class="ui basic segment" th:include="this :: content"></div>
+  	</div>
+</body>
+</html>

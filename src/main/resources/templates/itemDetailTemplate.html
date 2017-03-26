@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="../templates/masterTemplate :: page">
+	<div th:fragment="content">
+		<form action="#" th:action="${postAction}" method="post" th:object="${itemDetail}">
+			<input type="hidden" name="itemDetail.id" th:value="*{id}" /> 
+			<label>Item:</label> <input type="text" name="itemDetail.name" th:value="*{name}" /> 
+			<label>Quantity:</label> <input type="text" name="itemDetail.quantity" th:value="*{quantity}" />
+			<input type="submit" />	
+		</form>	
+		<a href="/">Zurück</a>
+	</div>
+</html>
